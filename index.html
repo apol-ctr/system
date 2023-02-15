@@ -1,0 +1,159 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="company" content="Polícia Centro Tático Revolucionário">
+    	<meta name="author" content="Vitor Capelli">
+        <title>CTR: Academia Policial</title>
+        <link rel="icon" type="image/png" href="https://i.imgur.com/ZGaPPl1.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+        <link href="https://apol-ctr.github.io/system/style.css" rel="stylesheet">
+        <link href="https://kit-pro.fontawesome.com/releases/v6.1.1/css/pro.min.css" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <style>
+            #calendario thead {
+                background-color: var(--bs-table-hover-color);
+                color: #fff;
+                font-family: Poppins, sans-serif;
+            }
+            #calendario tbody{
+                text-align: center;
+            }
+            .icon{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 32px;
+                min-width: 32px;
+                margin-right: 1em;
+                color: #fff;
+                border-radius: 0.35em;
+            }
+            .fs-85{
+                font-size: .85rem;
+            }
+        </style>
+        <style>header, .footer, #header-banner, #notif-menu, #main-user-menu, .avatartop{display:none}</style>
+    </head>
+    <body id="body-pd" class="bg-light">
+        <header class="header" id="header">
+            <div class="header_toggle">
+                <i class="bx bx-menu" id="header-toggle"></i>
+            </div>
+            <div class="header_title">
+                <span>Academia Policial</span>
+            </div>
+        </header>
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <a class="nav_logo">
+                        <i class="fa-solid fa-user-police nav_logo-icon"></i>
+                        <span class="nav_logo-name">APOL</span>
+                    </a>
+                    <div class="nav_list">
+                        <a href="/" class="nav_link active" id="dashboard">
+                            <i class="bx bx-grid-alt nav_icon"></i>
+                            <span class="nav_name">Página Inicial</span>
+                        </a>
+                        <a href="/apostilas" class="nav_link" id="distin">
+                            <i class="bx bxs-file nav_icon" id="document"></i>
+                            <span class="nav_name">Apostilas</span>
+                        </a>
+                        <a href="/projetos" class="nav_link" id="project">
+                            <i class="bx bx-file-find nav_icon"></i>
+                            <span class="nav_name">Projetos</span>
+                        </a>
+                        <a href="/calendario" class="nav_link" id="calendar">
+                            <i class="bx bx-calendar-alt nav_icon"></i>
+                            <span class="nav_name">Calendário</span>
+                        </a>
+                        <a href="/membros" class="nav_link" id="lista">
+                            <i class="bx bx-group nav_icon"></i>
+                            <span class="nav_name">Membros</span>
+                        </a>
+                        <a href="/aprovados" class="nav_link" id="distin">
+                            <i class="bx bxs-graduation nav_icon" id="document"></i>
+                            <span class="nav_name">Aprovados</span>
+                        </a>
+                        <a href="/anuncios" class="nav_link" id="announcement">
+                            <i class="bx bxs-megaphone nav_icon"></i>
+                            <span class="nav_name">Anúncios</span>
+                        </a>
+                    </div>
+                </div>
+              <a href="https://policiactroficial.forumeiros.com" class="nav_link">
+                    <i class="bx bx-log-out nav_icon"></i>
+                    <span class="nav_name">Voltar fórum</span>
+                </a>
+            </nav>
+        </div>
+    <!--Container Main start-->
+    <div class="height-100" id="i_dashboard">
+        <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <img src="data:image/png;base64,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" class="mb-3" alt="">
+                    <h1 class="fw-light">Academia Policial</h1>
+                    <p class="text-muted">Bem-vindo ao sistema da Academia Policial</p>
+                </div>
+            </div>
+            <div class="card-group script" id="link">
+            </div>
+        </section>
+        <main class="container">
+            <div class="my-3 p-3 bg-body rounded shadow-sm border" id="update">
+                <h6 class="border-bottom pb-2 mb-0">Recentes atualizações</h6>
+              </div>
+        </main>
+        <!--Footer-->
+        <main class="flex-shrink-0 pb-2 pt-5" id="footer">
+            <div class="container">
+                <p class="lead"><i class='bx bx-code-alt'></i> Desenvolvido por vcapelli</p>
+                <p>Todos os direitos reservados à <a href="https://policiactroficial.forumeiros.com">Polícia CTR</a>.</p>
+            </div>
+        </main>
+    </div>
+    <!--Container Main end-->
+    <!--Javascript-->
+    <!--Página Inicial-->
+    <script>
+        var dados = [];
+        $(document).ready(function(){
+            fetch('https://opensheet.elk.sh/15FKmyrKLmB5DOktGkdDHJgPN9PHC7hUUgimoNj8qjlY/Atualização')
+            .then(res => res.json())
+            .then(data => {
+                data.forEach(row => {
+                    dados.push([row['ICONE'],row['COR'],row['NICKNAME'],row['ATUALIZAÇÃO']]);
+                    $("#update").append('<div class="d-flex text-muted pt-3 border-bottom">' +
+                                       '<div class="icon" style="background-color:#'+ row['COR'] +'"><i class="fas fa-'+ row['ICONE'] +'"></i></div>' +
+                                       '<p class="pb-3 mb-0 small lh-sm">' +
+                                       '<strong class="d-block text-gray-dark">'+ row['NICKNAME'] +'</strong>' + row['ATUALIZAÇÃO'] + '</p></div>');
+                });
+            })
+        })
+    </script>
+    <script>
+        var dados = [];
+        $(document).ready(function(){
+            fetch('https://opensheet.elk.sh/15FKmyrKLmB5DOktGkdDHJgPN9PHC7hUUgimoNj8qjlY/Links')
+            .then(res => res.json())
+            .then(data => {
+                data.forEach(row => {
+                    dados.push([row['URL'],row['TÍTULO'],row['CONTEÚDO']]);
+                    $("#link").append('<a href="'+row['URL']+'"><div class="card card-cape shadow-sm" style="width: 18rem;">' +
+                                       '<h6>'+row['TÍTULO']+'</h6>' +
+                                       '<h4>'+row['CONTEÚDO']+'</h4>' +
+                                       '</div></a>');
+                });
+            })
+        })
+    </script>
+    <script src="https://vitorcape.github.io/file/dip/script.js"></script>
+   </body>
+</html>
