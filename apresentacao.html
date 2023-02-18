@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta name="company" content="Polícia Centro Tático Revolucionário">
+    	<meta name="author" content="Vitor Capelli">
+        <title>CTR: Academia Policial</title>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/7957d4766d.js" crossorigin="anonymous"></script>
+        <style>
+  
+            body{
+                background-color: #D1D1D1;
+            }
+            [style*="--aspect-ratio"] > :first-child {
+              width: 100%;
+            }
+            
+            [style*="--aspect-ratio"] > img {  
+              height: auto;
+            }
+            
+            @supports (--custom:property) {
+              [style*="--aspect-ratio"] {
+                position: relative;
+              }
+              
+              [style*="--aspect-ratio"]::before {
+                content: "";
+                display: block;
+                padding-bottom: calc(100% / (var(--aspect-ratio)));
+              }
+              
+              [style*="--aspect-ratio"] > :first-child {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+              }  
+            }
+        </style>
+    </head>
+    <body>
+        <div style="--aspect-ratio: 16/9;">
+            <div align="center">
+                <iframe src="https://drive.google.com/file/d/1JgtxaGrJeph3xVRwmhXq5aozfwZzrMdr/preview" width="940" height="620" frameborder="0"></iframe>
+            </div>
+        </div>
+    </body>
+</html>
